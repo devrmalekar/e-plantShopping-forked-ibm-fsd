@@ -290,11 +290,10 @@ function ProductList({ onHomeClick }) {
                 </div>
             </div>
             {!showCart ? (
-                <div className="product-grid">
-                    {
+                    
                         plantsArray.map((plantsCat, catIndex)=>(
-                            <div key={catIndex}>
-                             <div className='plant_heading'>
+                            <div key={catIndex} className='product-grid'>
+                            <div className='plant_heading'>
                                 <h2 className='plantname_heading'>{plantsCat.category}</h2>
                             </div>   
 
@@ -317,9 +316,8 @@ function ProductList({ onHomeClick }) {
                             </div>   
                             </div>
                         ))
-                    }
+                    
 
-                </div>
             ) : (
                 <CartItem onContinueShopping={handleContinueShopping} addedToCart={addedToCart} setAddedToCart={setAddedToCart}/>
             )}
